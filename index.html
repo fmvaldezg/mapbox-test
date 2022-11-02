@@ -56,7 +56,7 @@ Add an event listener that runs
 const popup = new mapboxgl.Popup({ offset: [0, -15] })
   .setLngLat(feature.geometry.coordinates)
   .setHTML(
-    `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+    `<h3>${feature.properties.GARDEN_NAME}</h3><p>${feature.properties.ADDRESS}</p>`
   )
   .addTo(map);
 
