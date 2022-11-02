@@ -33,7 +33,22 @@
     });
 
     // Code from the next step will go here.
+    /* 
+Add an event listener that runs
+  when a user clicks on the map element.
+*/
+    map.on('click', (event) => {
+  // If the user clicked on one of your markers, get its information.
+  const features = map.queryRenderedFeatures(event.point, {
+    layers: ['YOUR_LAYER_NAME'] // replace with your layer name
+  });
+  if (!features.length) {
+    return;
+  }
+  const feature = features[0];
 
+  // Code from the next step will go here.
+});
     </script>
   </body>
 </html>
